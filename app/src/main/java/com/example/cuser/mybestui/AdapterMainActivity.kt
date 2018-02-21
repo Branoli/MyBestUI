@@ -5,11 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import org.jetbrains.anko.*
 
 class AdapterMainActivity(private val mDataset:  ArrayList<GitHubRepositoryInfo>) : RecyclerView.Adapter<AdapterMainActivity.ViewHolder>()  {
 
     class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {
-        val mTextView: TextView = v.findViewById<View>(R.id.tv_recycler_item) as TextView
+        val mTextView: TextView = v.findViewById<View>(R.id.repo) as TextView
+
     }
 
     override fun onBindViewHolder(holder: AdapterMainActivity.ViewHolder, position: Int) {
